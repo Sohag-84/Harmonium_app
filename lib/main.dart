@@ -6,6 +6,13 @@ void main() {
   runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {
+
+  //to simplify code make a function
+  void soundPlay(int soundNumber){
+    final player = AudioCache();
+    player.play("assets_note$soundNumber.wav");
+  }
+
   const MyApp({Key? key}) : super(key: key);
 
   @override
@@ -24,48 +31,42 @@ class MyApp extends StatelessWidget {
               FlatButton(
                 color: Colors.red,
                 onPressed: (){
-                  final player = AudioCache();
-                  player.play("assets_note2.wav");
+                  soundPlay(2);
                 },
                 child: const Text("Click me"),
               ),
               FlatButton(
                 color: Colors.yellow,
                 onPressed: (){
-                  final player = AudioCache();
-                  player.play("assets_note3.wav");
+                  soundPlay(3);
                 },
                 child: const Text("Click me"),
               ),
               FlatButton(
                 color: Colors.green,
                 onPressed: (){
-                  final player = AudioCache();
-                  player.play("assets_note4.wav");
+                  soundPlay(4);
                 },
                 child: const Text("Click me"),
               ),
               FlatButton(
                 color: Colors.red,
                 onPressed: (){
-                  final player = AudioCache();
-                  player.play("assets_note5.wav");
+                  soundPlay(5);
                 },
                 child: const Text("Click me"),
               ),
               FlatButton(
                 color: Colors.deepOrange,
                 onPressed: (){
-                  final player = AudioCache();
-                  player.play("assets_note6.wav");
+                  soundPlay(6);
                 },
                 child: const Text("Click me"),
               ),
               FlatButton(
                 color: Colors.blue,
                 onPressed: (){
-                  final player = AudioCache();
-                  player.play("assets_note7.wav");
+                  soundPlay(7);
                 },
                 child: const Text("Click me"),
               ),
