@@ -27,48 +27,61 @@ class MyApp extends StatelessWidget {
         ),
         body: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,//its use to wrap full width in the screen
             children: [
-              FlatButton(
-                color: Colors.red,
-                onPressed: (){
-                  soundPlay(2);
-                },
-                child: const Text("Click me"),
+              Expanded(
+                child: FlatButton(
+                  color: Colors.red,
+                  onPressed: (){
+                    soundPlay(2);
+                  },
+                  child: const Text(""),
+                ),
               ),
-              FlatButton(
-                color: Colors.yellow,
-                onPressed: (){
-                  soundPlay(3);
-                },
-                child: const Text("Click me"),
+              Expanded(
+                child: FlatButton(
+                  color: Colors.yellow,
+                  onPressed: (){
+                    soundPlay(3);
+                  },
+                  child: const Text(""),
+                ),
               ),
-              FlatButton(
-                color: Colors.green,
-                onPressed: (){
-                  soundPlay(4);
-                },
-                child: const Text("Click me"),
+              Expanded(
+                child: FlatButton(
+                  color: Colors.green,
+                  onPressed: (){
+                    soundPlay(4);
+                  },
+                  child: const Text(""),
+                ),
               ),
-              FlatButton(
-                color: Colors.red,
-                onPressed: (){
-                  soundPlay(5);
-                },
-                child: const Text("Click me"),
+              Expanded(
+                child: FlatButton(
+                  color: Colors.deepPurple,
+                  onPressed: (){
+                    soundPlay(5);
+                  },
+                  child: const Text(""),
+                ),
               ),
-              FlatButton(
-                color: Colors.deepOrange,
-                onPressed: (){
-                  soundPlay(6);
-                },
-                child: const Text("Click me"),
+              Expanded(
+                child: FlatButton(
+                  color: Colors.tealAccent,
+                  onPressed: (){
+                    soundPlay(6);
+                  },
+                  child: const Text(""),
+                ),
               ),
-              FlatButton(
-                color: Colors.blue,
-                onPressed: (){
-                  soundPlay(7);
-                },
-                child: const Text("Click me"),
+              Expanded(
+                child: FlatButton(
+                  color: Colors.blue,
+                  onPressed: (){
+                    soundPlay(7);
+                  },
+                  child: const Text(""),
+                ),
               ),
 
             ],
