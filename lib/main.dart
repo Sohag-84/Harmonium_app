@@ -12,6 +12,18 @@ class MyApp extends StatelessWidget {
     final player = AudioCache();
     player.play("assets_note$soundNumber.wav");
   }
+  //make function for expanded widget
+  Expanded expanded(Color color, int soundNumber){
+    return Expanded(
+      child: FlatButton(
+        color: color,
+        onPressed: (){
+          soundPlay(soundNumber);
+        },
+        child: const Text(""),
+      ),
+    );
+  }
 
   const MyApp({Key? key}) : super(key: key);
 
@@ -29,61 +41,12 @@ class MyApp extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,//its use to wrap full width in the screen
             children: [
-              Expanded(
-                child: FlatButton(
-                  color: Colors.red,
-                  onPressed: (){
-                    soundPlay(2);
-                  },
-                  child: const Text(""),
-                ),
-              ),
-              Expanded(
-                child: FlatButton(
-                  color: Colors.yellow,
-                  onPressed: (){
-                    soundPlay(3);
-                  },
-                  child: const Text(""),
-                ),
-              ),
-              Expanded(
-                child: FlatButton(
-                  color: Colors.green,
-                  onPressed: (){
-                    soundPlay(4);
-                  },
-                  child: const Text(""),
-                ),
-              ),
-              Expanded(
-                child: FlatButton(
-                  color: Colors.deepPurple,
-                  onPressed: (){
-                    soundPlay(5);
-                  },
-                  child: const Text(""),
-                ),
-              ),
-              Expanded(
-                child: FlatButton(
-                  color: Colors.tealAccent,
-                  onPressed: (){
-                    soundPlay(6);
-                  },
-                  child: const Text(""),
-                ),
-              ),
-              Expanded(
-                child: FlatButton(
-                  color: Colors.blue,
-                  onPressed: (){
-                    soundPlay(7);
-                  },
-                  child: const Text(""),
-                ),
-              ),
-
+              expanded(Colors.red,2),
+              expanded(Colors.orange,3),
+              expanded(Colors.tealAccent,4),
+              expanded(Colors.deepPurple,5),
+              expanded(Colors.deepOrangeAccent,6),
+              expanded(Colors.green,7),
             ],
           ),
         ),
